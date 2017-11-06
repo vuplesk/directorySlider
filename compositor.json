@@ -1,0 +1,83 @@
+{
+  "name": "vuplesk/directorySlider",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "sss",
+  "branch": "",
+  "style": {
+    "name": "Swiss",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/SwissHeader",
+      "article": "article/SwissArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+    "heading": {
+      "fontWeight": 700,
+      "letterSpacing": "-0.01em"
+    },
+    "layout": {
+      "fluid": true
+    },
+    "colors": {
+      "text": "#000",
+      "background": "#fff",
+      "primary": "#05a",
+      "secondary": "#444",
+      "highlight": "#f30",
+      "border": "#ccc",
+      "muted": "#eee"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/vuplesk/directorySlider",
+          "text": "GitHub"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "directorySlider",
+      "subhead": "jQuery slider that uses all images from a specified directory",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "directorySlider: jQuery slider that uses all images from a specified directory",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "vuplesk",
+          "repo": "directorySlider"
+        }
+      ]
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<p>#Directory Slider</p>\n<p>###Loads all images in a specified directory and creates a slide show</p>\n<p>####Version: 0.9\nFor more information and support when I have time or am feeling frisky ===&gt; <a href=\"http://www.justinwhall.com/directory-jquery-slider/\">http://www.justinwhall.com/directory-jquery-slider/</a></p>\n<p>##Instalation</p>\n<p>###Step 1: Link required files</p>\n<pre><span class=\"hljs-comment\">&lt;!-- jQuery library (served from Google) --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&quot;</span>&gt;</span><span class=\"undefined\"></span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>\n<span class=\"hljs-comment\">&lt;!-- directorySlider Javascript file --&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;/js/directorySlider.js&quot;</span>&gt;</span><span class=\"undefined\"></span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span></pre><p>###Step 2: Create HTML markup</p>\n<pre><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">&quot;directorySlider&quot;</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></pre><p>###Step 3: Call Directory Slider</p>\n<pre>$(<span class=\"hljs-built_in\">document</span>).ready(<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n  $(<span class=\"hljs-string\">&apos;.directorySlider&apos;</span>).directorySlider();\n});</pre><p>##Configuration Options</p>\n<p><strong>animation</strong>\nType of Animation.</p>\n<pre><span class=\"hljs-keyword\">default</span>: <span class=\"hljs-string\">&apos;fade&apos;</span>\n<span class=\"hljs-keyword\">options</span>: <span class=\"hljs-string\">&apos;fade&apos;</span>, <span class=\"hljs-string\">&apos;uncover&apos;</span></pre><p><strong>filebase</strong>\nType base of all files in you directoy. Ex: for files slide_01.jpg, slide_02.jpg and slide<em>03.jpg the filebase would be &apos;slide</em>&apos; and for img_01.png, img_02.png and img<em>03.png the filebase would be &apos;img</em>&apos;.</p>\n<pre>defaul<span class=\"hljs-variable\">t:</span> <span class=\"hljs-string\">&apos;slide_&apos;</span>\noption<span class=\"hljs-variable\">s:</span> <span class=\"hljs-built_in\">string</span></pre><p><strong>extension</strong>\nThe file extension of the files you are using.</p>\n<pre><span class=\"hljs-keyword\">default</span>: <span class=\"hljs-string\">&apos;jpg&apos;</span>\noptions: any <span class=\"hljs-keyword\">image</span> <span class=\"hljs-keyword\">format</span> (<span class=\"hljs-keyword\">string</span>)</pre><p><strong>directory</strong>\nThe directory of your slides.</p>\n<pre><span class=\"hljs-keyword\">default</span>: <span class=\"hljs-keyword\">null</span>\n<span class=\"hljs-keyword\">options</span>: <span class=\"hljs-string\">&apos;/path/to/slides/folder&apos;</span></pre><p><strong>numslides</strong>\nNumber of slides in directory.</p>\n<pre><span class=\"hljs-attr\">default:</span> <span class=\"hljs-literal\">null</span>\n<span class=\"hljs-attr\">options:</span> <span class=\"hljs-string\">integer</span></pre><p>###Optional Options\n<strong>speed</strong>\nSlide transition speed in milliseconds.</p>\n<pre><span class=\"hljs-symbol\">default:</span> <span class=\"hljs-number\">1000</span>\n<span class=\"hljs-symbol\">options:</span> integer</pre><p><strong>timeout</strong>\nTime between slides.</p>\n<pre><span class=\"hljs-symbol\">default:</span> <span class=\"hljs-number\">4000</span>\n<span class=\"hljs-symbol\">options:</span> integer</pre><p><strong>height</strong>\nHeight of your slideshow in pixels.</p>\n<pre><span class=\"hljs-attr\">default:</span> <span class=\"hljs-literal\">null</span>\n<span class=\"hljs-attr\">options:</span> <span class=\"hljs-string\">integer</span></pre><p><strong>width</strong>\nWidth of your slideshow in pixels.</p>\n<pre><span class=\"hljs-attr\">default:</span> <span class=\"hljs-literal\">null</span>\n<span class=\"hljs-attr\">options:</span> <span class=\"hljs-string\">integer</span></pre>"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/vuplesk/directorySlider",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/vuplesk",
+          "text": "vuplesk"
+        }
+      ]
+    }
+  ]
+}
